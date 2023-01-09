@@ -1,5 +1,16 @@
-<div>
-  <h3>Date Played</h3>
-  <app-deck-card></app-deck-card>
-</div>
-
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>{{game?.date | date}}</mat-card-title>
+    <mat-card-subtitle>{{game?.id}}</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    {{game?.notes}}
+  </mat-card-content>
+  <mat-card-actions>
+    <a mat-flat-button
+       color="primary"
+       routerLink="/decks">
+      VIEW
+    </a>
+  </mat-card-actions>
+</mat-card>

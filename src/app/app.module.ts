@@ -5,16 +5,26 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { GameCardComponent } from './game-card/game-card.component';
 import { DeckCardComponent } from './deck-card/deck-card.component';
+import { GameListComponent } from './game-list/game-list.component';
+import {MatCardModule} from "@angular/material/card";
+import {MatButtonModule} from "@angular/material/button";
+import { GameDeckListComponent } from './game-deck-list/game-deck-list.component';
+import {AppRoutingModule} from "./app-routing.module";
 
 @NgModule({
   declarations: [
     AppComponent,
     GameCardComponent,
-    DeckCardComponent
+    DeckCardComponent,
+    GameListComponent,
+    GameDeckListComponent,
   ],
   imports: [
     BrowserModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatCardModule,
+    MatButtonModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {Game} from "./game";
 
 
 @Component({
@@ -8,4 +9,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'MTGTrackerAngular';
+
+  game: Game = {
+    id: 1,
+    date: new Date(Date.now()),
+    notes: "foo this",
+    playersWithDeck: []
+  }
 }

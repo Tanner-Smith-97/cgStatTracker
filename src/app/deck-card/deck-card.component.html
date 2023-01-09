@@ -1,21 +1,16 @@
-<div class="container">
- <table class="table table-striped table-bordered">
-    <thead>
-    <tr>
-      <th>Deck Name</th>
-      <th>Winner</th>
-      <th>MMR</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr *ngFor="let deck of sampleDecks | async">
-      <td>{{deck.deckName}}</td>
-      <td><svg *ngIf="deck.winner" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-crown" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#00abfb" fill="none" stroke-linecap="round" stroke-linejoin="round">
-        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-        <path d="M12 6l4 6l5 -4l-2 10h-14l-2 -10l5 4z" />
-      </svg></td>
-      <td>{{deck.mmr}}</td>
-    </tr>
-    </tbody>
-  </table>
-</div>
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>{{ deck?.name }}</mat-card-title>
+    <mat-card-subtitle>{{ deck?.mmr }}</mat-card-subtitle>
+  </mat-card-header>
+  <img alt="DECK IMAGE"
+       class="card-commander-image"
+       mat-card-image
+       src="https://material.angular.io/assets/img/examples/shiba1.jpg"/>
+  <mat-card-content>
+    {{ deck?.imageUri ?? "sad no image" }}
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-flat-button color="primary">VIEW</button>
+  </mat-card-actions>
+</mat-card>
