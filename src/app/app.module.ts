@@ -10,6 +10,7 @@ import {MatCardModule} from "@angular/material/card";
 import {MatButtonModule} from "@angular/material/button";
 import { GameDeckListComponent } from './game-deck-list/game-deck-list.component';
 import {AppRoutingModule} from "./app-routing.module";
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import {AppRoutingModule} from "./app-routing.module";
     BrowserAnimationsModule,
     MatCardModule,
     MatButtonModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

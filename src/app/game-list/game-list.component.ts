@@ -1,7 +1,7 @@
 import {Component} from '@angular/core';
 import {Game} from "../game";
 import {GameApiService} from "../services/game-api.service";
-import {BehaviorSubject, map, Observable} from "rxjs";
+import {map, Observable} from "rxjs";
 
 @Component({
   selector: 'app-game-list',

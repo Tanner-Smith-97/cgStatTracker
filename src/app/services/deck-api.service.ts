@@ -8,7 +8,7 @@ import {environment} from "../../environments/environment";
 })
 export class DeckApiService {
   // TODO: Change this to what it needs to be after api is built
-  public uri: string = "https://localhost:5024/query-decks";
+  public uri: string = "https://localhost:5024/decks";
 
   public query(): Observable<Deck[]> {
     if (environment.useFakeData) {

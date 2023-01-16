@@ -1,4 +1,4 @@
-<mat-card>
+<mat-card style="max-width: 250px">
   <mat-card-header>
     <mat-card-title>{{ deck?.name }}</mat-card-title>
     <mat-card-subtitle>{{ deck?.mmr }}</mat-card-subtitle>
@@ -6,7 +6,8 @@
   <img alt="DECK IMAGE"
        class="card-commander-image"
        mat-card-image
-       src="https://material.angular.io/assets/img/examples/shiba1.jpg"/>
+       [src]="(cardImage | async) ?? 'https://cards.scryfall.io/art_crop/front/6/d/6da045f8-6278-4c84-9d39-025adf0789c1.jpg?1562404626'"
+  />
   <mat-card-content>
     {{ deck?.imageUri ?? "sad no image" }}
   </mat-card-content>
