@@ -15,6 +15,12 @@ import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatGridListModule} from "@angular/material/grid-list";
 import {MatIconModule} from "@angular/material/icon";
 import { GameDeckDetailComponent } from './game-deck-detail/game-deck-detail.component';
+import { PlayersListComponent } from './players-list/players-list.component';
+import { CreatePlayerDialogComponent } from './create-player-dialog/create-player-dialog.component';
+import {MatDialogModule} from "@angular/material/dialog";
+import {FormsModule} from "@angular/forms";
+import {MatInputModule} from "@angular/material/input";
+import {MatTableModule} from "@angular/material/table";
 
 @NgModule({
   declarations: [
@@ -24,6 +30,8 @@ import { GameDeckDetailComponent } from './game-deck-detail/game-deck-detail.com
     GameListComponent,
     GameDeckListComponent,
     GameDeckDetailComponent,
+    PlayersListComponent,
+    CreatePlayerDialogComponent,
   ],
   imports: [
     BrowserModule,
@@ -35,6 +43,10 @@ import { GameDeckDetailComponent } from './game-deck-detail/game-deck-detail.com
     MatToolbarModule,
     MatGridListModule,
     MatIconModule,
+    MatDialogModule,
+    FormsModule,
+    MatInputModule,
+    MatTableModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

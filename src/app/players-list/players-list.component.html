@@ -1,0 +1,23 @@
+<h1>Players</h1>
+
+<button mat-fab color="primary" class="button-create" (click)="openCreationDialog()"><mat-icon>add</mat-icon></button>
+
+<ng-container *ngIf="players$ | async as players">
+  <table mat-table [dataSource]="players">
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef>ID</th>
+      <td mat-cell *matCellDef="let player">{{ player.id }}</td>
+    </ng-container>
+    <ng-container matColumnDef="username">
+      <th mat-header-cell *matHeaderCellDef>Username</th>
+      <td mat-cell *matCellDef="let player">{{ player.name }}</td>
+    </ng-container>
+    <ng-container matColumnDef="mmr">
+      <th mat-header-cell *matHeaderCellDef>MMR</th>
+      <td mat-cell *matCellDef="let player">{{ player.mmr }}</td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="headers"></tr>
+    <tr mat-row *matRowDef="let row; columns: headers;"></tr>
+  </table>
+</ng-container>
