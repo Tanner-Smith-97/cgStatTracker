@@ -1,3 +1,9 @@
-<div *ngFor="let game of games$ | async">
-  <app-game-card></app-game-card>
-</div>
+<mat-grid-list cols="4" rowHeight="2:1">
+  <mat-grid-tile *ngFor="let game of games$ | async" style="background: lightblue;">
+    <app-game-card [game]="game"></app-game-card>
+  </mat-grid-tile>
+</mat-grid-list>
+
+<button mat-fab color="primary" class="button-create">
+  <mat-icon>add</mat-icon>
+</button>

@@ -1,3 +1,5 @@
-<div *ngFor="let deck of decks$ | async">
-  <app-deck-card [deck]="deck" style="padding: 5px"></app-deck-card>
-</div>
+<mat-grid-list cols="4" rowHeight="2:3">
+  <mat-grid-tile *ngFor="let deck of decks$ | async" style="background: lightblue;">
+    <app-deck-card [deck]="deck" style="padding: 5px"></app-deck-card>
+  </mat-grid-tile>
+</mat-grid-list>

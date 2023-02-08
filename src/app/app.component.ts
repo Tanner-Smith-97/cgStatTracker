@@ -9,11 +9,4 @@ import {Game} from "./game";
 })
 export class AppComponent {
   title = 'MTGTrackerAngular';
-
-  game: Game = {
-    id: 1,
-    date: new Date(Date.now()),
-    notes: "foo this",
-    playersWithDeck: []
-  }
 }

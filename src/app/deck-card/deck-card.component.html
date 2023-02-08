@@ -1,6 +1,6 @@
 <mat-card style="max-width: 250px">
   <mat-card-header>
-    <mat-card-title>{{ deck?.name }}</mat-card-title>
+    <mat-card-title>{{ deck?.deckName }}</mat-card-title>
     <mat-card-subtitle>{{ deck?.mmr }}</mat-card-subtitle>
   </mat-card-header>
   <img alt="DECK IMAGE"
@@ -9,9 +9,12 @@
        [src]="(cardImage | async) ?? 'https://cards.scryfall.io/art_crop/front/6/d/6da045f8-6278-4c84-9d39-025adf0789c1.jpg?1562404626'"
   />
   <mat-card-content>
-    {{ deck?.imageUri ?? "sad no image" }}
+    {{ deck?.imageUrl ?? "sad no image" }}
   </mat-card-content>
   <mat-card-actions>
-    <button mat-flat-button color="primary">VIEW</button>
+    <a mat-flat-button
+       color="primary"
+       [routerLink]="deckRoute"
+    >VIEW</a>
   </mat-card-actions>
 </mat-card>

@@ -15,16 +15,20 @@ export class DeckCardComponent implements OnInit {
 
     public cardImage: Observable<string | undefined> | undefined;
 
+    public deckRoute: string | undefined;
+
     constructor(private cardImageService: CardImageService) {
     }
 
 
     public ngOnInit(): void {
-      this.cardImage = this.cardImageService.query(this.deck?.name ?? "Anje Falkenrath")
+      this.cardImage = this.cardImageService.query(this.deck?.deckName ?? "Anje Falkenrath")
         .pipe(
           tap(
             value => this.imageUrl = value
           )
-        )
+        );
+
+      this.deckRoute = `/deck/${this.deck?.id}`;
     }
 }

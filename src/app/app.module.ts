@@ -11,6 +11,10 @@ import {MatButtonModule} from "@angular/material/button";
 import { GameDeckListComponent } from './game-deck-list/game-deck-list.component';
 import {AppRoutingModule} from "./app-routing.module";
 import {HttpClientModule} from "@angular/common/http";
+import {MatToolbarModule} from "@angular/material/toolbar";
+import {MatGridListModule} from "@angular/material/grid-list";
+import {MatIconModule} from "@angular/material/icon";
+import { GameDeckDetailComponent } from './game-deck-detail/game-deck-detail.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +23,7 @@ import {HttpClientModule} from "@angular/common/http";
     DeckCardComponent,
     GameListComponent,
     GameDeckListComponent,
+    GameDeckDetailComponent,
   ],
   imports: [
     BrowserModule,
@@ -26,7 +31,10 @@ import {HttpClientModule} from "@angular/common/http";
     MatCardModule,
     MatButtonModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    MatToolbarModule,
+    MatGridListModule,
+    MatIconModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

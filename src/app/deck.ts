@@ -1,6 +1,8 @@
 export interface Deck {
   id: number;
-  name: string;
-  imageUri?: string;
+  deckName: string;
+  playerId: number;
   mmr: number;
+  imageUrl?: string;
+  deckUrl?: string;
 }

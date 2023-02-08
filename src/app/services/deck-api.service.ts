@@ -23,15 +23,23 @@ export class DeckApiService {
     return of([
       {
         id: 1,
-        name: 'Anje Falkenrath',
+        deckName: 'Anje Falkenrath',
       },
       {
         id: 2,
-        name: "Zurgo Helmsmaher"
+        deckName: "Zurgo Helmsmaher"
       },
       {
         id: 3,
-        name: "Prosper, Tome-Bound"
+        deckName: "Prosper, Tome-Bound"
+      },
+      {
+        id: 4,
+        deckName: "Edgar Markov"
+      },
+      {
+        id: 5,
+        deckName: "Stromkirk Captain"
       }
     ] as Deck[])
   }

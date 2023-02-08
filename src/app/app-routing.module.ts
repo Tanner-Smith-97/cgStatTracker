@@ -2,6 +2,7 @@ import {RouterModule, Routes} from "@angular/router";
 import {NgModule} from "@angular/core";
 import {GameListComponent} from "./game-list/game-list.component";
 import {GameDeckListComponent} from "./game-deck-list/game-deck-list.component";
+import {GameDeckDetailComponent} from "./game-deck-detail/game-deck-detail.component";
 
 const routes: Routes = [
   {
@@ -11,6 +12,10 @@ const routes: Routes = [
   {
     path: "decks",
     component: GameDeckListComponent
+  },
+  {
+    path: "deck/:deckId",
+    component: GameDeckDetailComponent,
   },
   {
     path: "**",
