@@ -20,4 +20,8 @@ export class PlayerApiService {
   public getPlayers(): Observable<Player[]> {
     return this.http.get<Player[]>(this.uri + "players");
   }
+
+  public getPlayerByName(username: string): Observable<Player> {
+    return this.http.get<Player>(this.uri + 'GetPlayer/' + username);
+  }
 }

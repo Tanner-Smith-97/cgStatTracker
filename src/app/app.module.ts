@@ -21,6 +21,7 @@ import {MatDialogModule} from "@angular/material/dialog";
 import {FormsModule} from "@angular/forms";
 import {MatInputModule} from "@angular/material/input";
 import {MatTableModule} from "@angular/material/table";
+import { PlayerDetailComponent } from './player-detail/player-detail.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import {MatTableModule} from "@angular/material/table";
     GameDeckDetailComponent,
     PlayersListComponent,
     CreatePlayerDialogComponent,
+    PlayerDetailComponent,
   ],
   imports: [
     BrowserModule,

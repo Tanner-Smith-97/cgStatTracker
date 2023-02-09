@@ -18,7 +18,8 @@ export class PlayersListComponent implements OnInit, OnDestroy {
   protected headers: string[] = [
     'id',
     'username',
-    'mmr'
+    'mmr',
+    'actions'
   ]
 
   constructor(
