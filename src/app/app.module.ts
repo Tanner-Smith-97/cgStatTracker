@@ -22,6 +22,8 @@ import {FormsModule} from "@angular/forms";
 import {MatInputModule} from "@angular/material/input";
 import {MatTableModule} from "@angular/material/table";
 import { PlayerDetailComponent } from './player-detail/player-detail.component';
+import { CreateDeckDialogComponent } from './create-deck-dialog/create-deck-dialog.component';
+import {MatTooltipModule} from "@angular/material/tooltip";
 
 @NgModule({
   declarations: [
@@ -34,6 +36,7 @@ import { PlayerDetailComponent } from './player-detail/player-detail.component';
     PlayersListComponent,
     CreatePlayerDialogComponent,
     PlayerDetailComponent,
+    CreateDeckDialogComponent,
   ],
   imports: [
     BrowserModule,
@@ -49,6 +52,7 @@ import { PlayerDetailComponent } from './player-detail/player-detail.component';
     FormsModule,
     MatInputModule,
     MatTableModule,
+    MatTooltipModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

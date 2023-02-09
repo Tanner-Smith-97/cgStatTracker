@@ -1,0 +1,10 @@
+<div mat-dialog-content>
+  <mat-form-field>
+    <mat-label>Deck Name</mat-label>
+    <input matInput [(ngModel)]="deckName">
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-flat-button color="warn" (click)="onCancel()">CANCEL</button>
+  <button mat-flat-button color="primary" [matDialogClose]="{ deckName }">CREATE</button>
+</div>

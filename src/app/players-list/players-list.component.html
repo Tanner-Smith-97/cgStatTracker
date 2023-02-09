@@ -1,6 +1,8 @@
 <h1>Players</h1>
 
-<button mat-fab color="primary" class="button-create" (click)="openCreationDialog()"><mat-icon>add</mat-icon></button>
+<button mat-fab color="primary"
+        matTooltip="Create Player"
+        class="button-create" (click)="openCreationDialog()"><mat-icon>add</mat-icon></button>
 
 <ng-container *ngIf="players$ | async as players">
   <table mat-table [dataSource]="players">

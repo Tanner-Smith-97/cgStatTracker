@@ -3,6 +3,8 @@
   <p>User Id: {{ user.id }}</p>
   <p>User Name: {{ user.name }}</p>
   <p>User MMR: {{ user.mmr }}</p>
+  <p>User Games Played: {{ user.gamesPlayed }}</p>
+  <p>User Games Won: {{ user.gamesWon }}</p>
 
   <h2>Decks</h2>
   <table mat-table [dataSource]="user.decks ?? []">
@@ -41,4 +43,11 @@
     <tr mat-header-row *matHeaderRowDef="['id', 'name', 'mmr', 'gamesPlayed', 'gamesWon', 'actions']"></tr>
     <tr mat-row *matRowDef="let row; columns: ['id', 'name', 'mmr', 'gamesPlayed', 'gamesWon', 'actions'];"></tr>
   </table>
+
+  <button mat-fab color="primary"
+          matTooltip="Create Deck for Player"
+          (click)="onCreateDeck(user.name)"
+          style="position: absolute; right: 50px; bottom: 50px">
+    <mat-icon>add</mat-icon>
+  </button>
 </div>
