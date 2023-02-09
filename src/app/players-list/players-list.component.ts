@@ -42,7 +42,9 @@ export class PlayersListComponent implements OnInit, OnDestroy {
           .pipe(
             take(1)
           )
-          .subscribe()
+          .subscribe(() => {
+            this.updatePlayers();
+          })
       })
   }
 
@@ -51,6 +53,10 @@ export class PlayersListComponent implements OnInit, OnDestroy {
   }
 
   public ngOnInit(): void {
-    this.players$ = this.playerApiService.getPlayers()
+    this.updatePlayers();
+  }
+
+  private updatePlayers(): void {
+    this.players$ = this.playerApiService.getPlayers();
   }
 }
