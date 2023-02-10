@@ -1,6 +1,6 @@
 <mat-grid-list cols="4" rowHeight="2:1">
   <mat-grid-tile *ngFor="let game of games$ | async" style="background: lightblue;">
-    <app-game-card [game]="game"></app-game-card>
+    <app-game-card [game]="game" [players]="(players$ | async) ?? []"></app-game-card>
   </mat-grid-tile>
 </mat-grid-list>
 

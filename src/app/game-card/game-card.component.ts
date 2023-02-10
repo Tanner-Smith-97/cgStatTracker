@@ -1,5 +1,6 @@
 import {Component, Input} from '@angular/core';
 import {Game} from "../game";
+import {Player} from "../player";
 
 @Component({
   selector: 'app-game-card',
@@ -7,5 +8,6 @@ import {Game} from "../game";
   styleUrls: ['./game-card.component.css']
 })
 export class GameCardComponent {
-  @Input() public game: Game | undefined;
+  @Input() public game?: Game;
+  @Input() public players?: Player[];
 }

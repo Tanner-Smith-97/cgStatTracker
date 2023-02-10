@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { GameCardComponent } from './game-card/game-card.component';
 import { DeckCardComponent } from './deck-card/deck-card.component';
-import { GameListComponent } from './game-list/game-list.component';
+import {CalculatePipe, GameListComponent} from './game-list/game-list.component';
 import {MatCardModule} from "@angular/material/card";
 import {MatButtonModule} from "@angular/material/button";
 import { GameDeckListComponent } from './game-deck-list/game-deck-list.component';
@@ -37,6 +37,7 @@ import {MatTooltipModule} from "@angular/material/tooltip";
     CreatePlayerDialogComponent,
     PlayerDetailComponent,
     CreateDeckDialogComponent,
+    CalculatePipe,
   ],
   imports: [
     BrowserModule,

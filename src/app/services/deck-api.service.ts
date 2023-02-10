@@ -23,6 +23,10 @@ export class DeckApiService {
     return of([])
   }
 
+  public getAllDeck(): Observable<Deck[]> {
+    return this.http.get<Deck[]>(this.uri + "GetDecks")
+  }
+
   public createDeck(deckName: string, playerName: string): Observable<void> {
     return this.http.post<void>(this.uri + "CreateDeck", {
     }, {

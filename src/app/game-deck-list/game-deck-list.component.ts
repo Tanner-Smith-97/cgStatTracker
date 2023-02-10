@@ -9,14 +9,7 @@ import {DeckApiService} from "../services/deck-api.service";
   styleUrls: ['./game-deck-list.component.css']
 })
 export class GameDeckListComponent {
-  private decks: Deck[] = [];
-  protected decks$: Observable<Deck[]> = this.deckApi.query()
-    .pipe(
-      map(decks => {
-        this.decks = decks;
-        return this.decks;
-      })
-    )
+  protected decks$: Observable<Deck[]> = this.deckApi.getAllDeck();
 
   constructor(private deckApi: DeckApiService) {
   }

@@ -2,11 +2,17 @@ import {Player} from "./player";
 import {Deck} from "./deck";
 
 export interface Game {
-  id: number;
+  id: string;
   date: Date;
-  notes: string;
-  playersWithDeck: {
-    player: Player;
-    deck: Deck;
-  }[];
+
+  gameDetail: GameDetails[]
+}
+
+export interface  GameDetails {
+  gameId: string,
+  playerId: number,
+  deckId: number,
+  playerMmr: number,
+  deckMmr: number,
+  placement: number
 }
