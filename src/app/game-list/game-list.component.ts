@@ -1,9 +1,11 @@
 import {Component, Pipe} from '@angular/core';
 import {Game} from "../game";
 import {GameApiService} from "../services/game-api.service";
-import {Observable} from "rxjs";
+import {Observable, take} from "rxjs";
 import {Player} from "../player";
 import {PlayerApiService} from "../services/player-api.service";
+import {MatDialog} from "@angular/material/dialog";
+import {CreateGameDialogComponent} from "../create-game-dialog/create-game-dialog.component";
 
 @Component({
   selector: 'app-game-list',
@@ -16,7 +18,13 @@ export class GameListComponent {
   protected games$: Observable<Game[]> = this.gameApi.getPreviousGames();
 
   constructor(private gameApi: GameApiService,
-              private playersApiService: PlayerApiService) {
+              private playersApiService: PlayerApiService,
+              private dialogService: MatDialog) {
+  }
+
+  onCreate() {
+    const dialogRef = this.dialogService.open(CreateGameDialogComponent, {});
+    dialogRef.afterClosed().pipe(take(1)).subscribe();
   }
 }
 

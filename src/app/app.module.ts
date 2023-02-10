@@ -24,6 +24,7 @@ import {MatTableModule} from "@angular/material/table";
 import { PlayerDetailComponent } from './player-detail/player-detail.component';
 import { CreateDeckDialogComponent } from './create-deck-dialog/create-deck-dialog.component';
 import {MatTooltipModule} from "@angular/material/tooltip";
+import { CreateGameDialogComponent } from './create-game-dialog/create-game-dialog.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import {MatTooltipModule} from "@angular/material/tooltip";
     PlayerDetailComponent,
     CreateDeckDialogComponent,
     CalculatePipe,
+    CreateGameDialogComponent,
   ],
   imports: [
     BrowserModule,
